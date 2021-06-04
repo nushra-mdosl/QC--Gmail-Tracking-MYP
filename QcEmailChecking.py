@@ -76,8 +76,7 @@ class EmailChecking():
                         imapSession =  imaplib.IMAP4_SSL("imap.gmail.com")
                         imapSession.login(loginEmail,password)
                     except Exception as e:
-                        print('81')
-                        print (e)
+                       
                         logging.info('Error Login to email ' + loginEmail)
                         subject = 'Qc Email BOT - Error Login to:{}'.format(loginEmail)
                         message =(f"""Qc Email BOT - Error Login to: {loginEmail}
