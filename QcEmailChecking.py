@@ -1,4 +1,3 @@
-#latest working file on 9th april 2021
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
