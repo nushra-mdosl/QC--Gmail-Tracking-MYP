@@ -1,0 +1,122 @@
+{
+	"hotels":[
+
+	{
+	 
+	  "hotelGroupName" : "Cinamon",
+      "loginEmails": "nushrafawmy@gmail.com",
+      "loginPasswords": "",
+      "hotel":
+      [
+      	{
+      	  "hotelName": "atNushra",
+          "reports":
+          [
+          	{
+          	  "subject": "Orgin hotel1", 
+              "mailfrom": "nushrafawmy@gmail.com"
+
+          	}
+          	,
+            {
+              "subject": "Safari hotel1", 
+              "mailfrom": "nushrafawmy@gmail.com"
+            },
+            {
+              "subject": "Lakeside Hotel1", 
+              "mailfrom": "nushrafawmy@gmail.com"
+            }
+          ] 
+
+        },
+        {
+      	  "hotelName": "atFareeda",
+          "reports":
+          [
+          	{
+          	  "subject": "Orgin hotel2", 
+              "mailfrom": "fareedasanoon@gmail.com"
+
+          	}
+          	,
+            {
+              "subject": "Safari hotel2", 
+              "mailfrom": "fareedasanoon@gmail.com"
+            },
+            {
+              "subject": "Lakeside Hotel2", 
+              "mailfrom": "fareedasanoon@gmail.com"
+            }
+          ] 
+
+        }
+
+
+      ]
+	
+	},
+  {
+	 
+	  "hotelGroupName" : "Goviyapana",
+      "loginEmails": "fareedasanoon@gmail.com",
+      "loginPasswords": "",
+      "hotel":
+      [
+      	{
+      	  "hotelName": "atGalle",
+          "reports":
+          [
+          	{
+          	  "subject": "Orgin hotel3", 
+              "mailfrom": "nushrafawmy@gmail.com"
+
+          	}
+          	,
+            {
+              "subject": "Safari hotel3", 
+              "mailfrom": "nushrafawmy@gmail.com"
+            },
+            {
+              "subject": "Lakeside Hotel3", 
+              "mailfrom": "nushrafawmy@gmail.com"
+            }
+          ] 
+
+        },
+        {
+      	  "hotelName": "atMatara",
+          "reports":
+          [
+          	{
+          	  "subject": "Orgin hotel4", 
+              "mailfrom": "fareedasanoon@gmail.com"
+
+          	}
+          	,
+            {
+              "subject": "Safari hotel4", 
+              "mailfrom": "fareedasanoon@gmail.com"
+            },
+            {
+              "subject": "Lakeside Hotel4", 
+              "mailfrom": "fareedasanoon@gmail.com"
+            }
+          ] 
+
+        }
+
+
+      ]
+	
+	}
+ 
+  ],
+  "qcmail":[
+    {
+      "email" :"nushra@mydigitaloffice.ca",
+      "ccmail" :"fareedasanoon@gmail.com"
+    }
+  ]
+
+
+}
