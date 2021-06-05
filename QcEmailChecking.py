@@ -117,11 +117,11 @@ class EmailChecking():
            
                         for m in data['qcmail']:
                             qcemail = m['email']
-                            # ccmail = m['ccmail']
+                           
                            
 
                             self.sendMailAtachment(groupname,hotelname,self.errorReportemail,self.errorReportemailpasswd,qcemail)
-                        #  logger.exception("FATAL ERROR: {}".format(e), exc_info=False)   
+                          
                     except Exception as e:
                         print('127')
                         print(e)
@@ -258,7 +258,7 @@ Fix: Check JSON file
                 logging.info("Error In Generating Excel  :{}".format(e))
                 
 
-    # self.checkAttachement(loginEmail,password,subject,mailfrom,groupname,hotelname)
+
 
     def checkAttachement(self,loginEmail,password,subject,mailfrom,groupname,hotelname):
         imapSession =  imaplib.IMAP4_SSL("imap.gmail.com")
@@ -269,8 +269,10 @@ Fix: Check JSON file
 
                 typ, data = imapSession.select('"[Gmail]/All Mail"')
                     # date = (datetime.date.today() - datetime.timedelta(1)).strftime("%d-%b-%Y")
-                date = (datetime.date.today() - datetime.timedelta(1)).strftime("%d-%b-%Y")
-                typ, data = imapSession.search(None, '(SENTON "'+ date + '")','(SUBJECT "'+ subject + '")','(TO "'+ mailfrom + '")')
+                date = (datetime.date.today() - datetime.timedelta(0)).strftime("%d-%b-%Y")
+                print(date)
+                # typ, data = imapSession.search(None, '(ON "'+ date + '")','(SUBJECT "'+ subject + '")','(TO "'+ mailfrom + '")') when used in production env
+                typ, data = imapSession.search(None, '(ON "'+ date + '")','(SUBJECT "'+ subject + '")','(FROM "'+ mailfrom + '")')
                 
                 checkForAttachement = data[0].split()
             
@@ -284,10 +286,11 @@ Fix: Check JSON file
                 else:
                     print('314')
                     with MailBox('imap.gmail.com').login(loginEmail,password,initial_folder='[Gmail]/All Mail') as mailbox:
-                        date = (datetime.date.today() - datetime.timedelta(1)).strftime("%d-%b-%Y")
+                        date = (datetime.date.today() - datetime.timedelta(0)).strftime("%d-%b-%Y")
                         print('318')
                         # on
-                        for msg in mailbox.fetch(A('(ON "'+ date + '")','(SUBJECT "'+ subject + '")','(TO "'+ mailfrom + '")')):
+                        # for msg in mailbox.fetch(A('(ON "'+ date + '")','(SUBJECT "'+ subject + '")','(TO "'+ mailfrom + '")')): when used in production env
+                        for msg in mailbox.fetch(A('(ON "'+ date + '")','(SUBJECT "'+ subject + '")','(FROM "'+ mailfrom + '")')):
                             print('321')
                             print(msg.date)
                             print(msg.subject)
@@ -300,16 +303,12 @@ Fix: Check JSON file
 
                             elif any(att.filename.lower().endswith('.xlsx') for att in msg.attachments):
                                 print('- has xlsx')
-                                reportExist = 'xlsx Not Exsist'
+                                reportExist = 'xlsx Exsist'
                                 reportType = 'XLSX'
                                 self.writingToExcel(loginEmail,date,msg.subject,mailfrom,reportExist,reportType,groupname,hotelname)
-                            # elif any(att.filename.lower().endswith('.txt') for att in msg.attachments):
-                            #     print('- has txt')
-                            #     reportExist = 'PDF Not Exsist'
-                            #     reportType = 'TXT'
-                            #     self.writingToExcel(loginEmail,date,msg.subject,mailfrom,reportExist,reportType,groupname,hotelname)
+                            
                             else:
-                                reportExist = 'PDF Not Exsist'
+                                reportExist = 'Report Not Exsist'
                                 reportType = 'N/A'
                                 print('N/A')
                                 self.writingToExcel(loginEmail,date,msg.subject,mailfrom,reportExist,reportType,groupname,hotelname)
@@ -337,7 +336,7 @@ Fix: Check JSON file
             print(e)
             
     
-#  self.sendMailAtachment(groupname,hotelname,self.errorReportemail,self.errorReportemailpasswd,qcemail)
+
     def sendMailAtachment(self,groupname,hotelname,email,password,qcemail):
         try:
             imapSession =  smtplib.SMTP(host = "smtp.gmail.com",port = 587)
@@ -439,7 +438,7 @@ def main():
     EmailChecking()  # create instance of QcEmailChecking
     
 if __name__ == '__main__':
-    # self.errorReportemail
+  
     
     # schedule.every(1).minutes.do(main)
     with open(os.path.join(root, 'loginHotel.json')) as json_file:

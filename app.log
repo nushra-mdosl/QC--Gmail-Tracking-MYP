@@ -1,0 +1,35 @@
+2021-06-05 09:36:00,984 DEBUG Running job Job(interval=1, unit=days, do=main, args=(), kwargs={})
+2021-06-05 09:36:02,719 INFO Checking hotel details for nushrafawmy@gmail.com
+2021-06-05 09:36:20,114 INFO Attachement Removed Cinamon2021-06-04.xlsx
+2021-06-05 09:36:20,114 INFO Attachement Sent Cinamon2021-06-04.xlsx
+2021-06-05 09:36:21,259 INFO Error Login to email fareedasanoon@gmail.com
+2021-06-05 09:36:21,260 INFO Sending error email
+2021-06-05 09:36:25,068 INFO Qc email bot starting
+2021-06-05 09:46:00,631 DEBUG Running job Job(interval=1, unit=days, do=main, args=(), kwargs={})
+2021-06-05 09:46:02,108 INFO Checking hotel details for nushrafawmy@gmail.com
+2021-06-05 09:46:20,131 INFO Attachement Removed Cinamon2021-06-04.xlsx
+2021-06-05 09:46:20,131 INFO Attachement Sent Cinamon2021-06-04.xlsx
+2021-06-05 09:46:21,139 INFO Error Login to email fareedasanoon@gmail.com
+2021-06-05 09:46:21,140 INFO Sending error email
+2021-06-05 09:46:24,810 INFO Qc email bot starting
+2021-06-05 09:55:00,297 DEBUG Running job Job(interval=1, unit=days, do=main, args=(), kwargs={})
+2021-06-05 09:55:01,882 INFO Checking hotel details for nushrafawmy@gmail.com
+2021-06-05 09:55:21,300 INFO Attachement Removed Cinamon2021-06-04.xlsx
+2021-06-05 09:55:21,300 INFO Attachement Sent Cinamon2021-06-04.xlsx
+2021-06-05 09:55:22,337 INFO Error Login to email fareedasanoon@gmail.com
+2021-06-05 09:55:22,337 INFO Sending error email
+2021-06-05 09:55:26,573 INFO Qc email bot starting
+2021-06-05 10:01:00,499 DEBUG Running job Job(interval=1, unit=days, do=main, args=(), kwargs={})
+2021-06-05 10:01:01,894 INFO Checking hotel details for nushrafawmy@gmail.com
+2021-06-05 10:01:19,776 INFO Attachement Removed Cinamon2021-06-04.xlsx
+2021-06-05 10:01:19,777 INFO Attachement Sent Cinamon2021-06-04.xlsx
+2021-06-05 10:01:20,854 INFO Error Login to email fareedasanoon@gmail.com
+2021-06-05 10:01:20,854 INFO Sending error email
+2021-06-05 10:01:24,593 INFO Qc email bot starting
+2021-06-05 10:03:00,864 DEBUG Running job Job(interval=1, unit=days, do=main, args=(), kwargs={})
+2021-06-05 10:03:02,174 INFO Checking hotel details for nushrafawmy@gmail.com
+2021-06-05 10:03:25,300 INFO Attachement Removed Cinamon2021-06-04.xlsx
+2021-06-05 10:03:25,300 INFO Attachement Sent Cinamon2021-06-04.xlsx
+2021-06-05 10:03:27,470 INFO Error Login to email fareedasanoon@gmail.com
+2021-06-05 10:03:27,470 INFO Sending error email
+2021-06-05 10:03:35,326 INFO Qc email bot starting
